@@ -6,6 +6,7 @@
 4. [StringTemplates.kt](/src/StringTemplates.kt)
 5. [CustomAccessors.kt](/src/CustomAccessors.kt)
 6. [Enum.kt](/src/Enum.kt)
+7. [When.kt](/src/When.kt)
 
 # Keywords
 
