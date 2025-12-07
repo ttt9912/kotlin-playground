@@ -3,7 +3,6 @@
  * Kotlin tries to avoid NullPointerException at compile time.
  * --> println(s.length) won't compile
  */
-
 var s: String? = null
 var s2: String = "Hello"
 
