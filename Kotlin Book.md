@@ -8,6 +8,7 @@
 6. [Enum.kt](/src/Enum.kt)
 7. [When.kt](/src/When.kt)
 8. [SmartCasts.kt](/src/SmartCasts.kt)
+9. [Iterations.kt](/src/Iterations.kt)
 
 # Keywords
 
@@ -76,19 +77,42 @@ Mix Java and Kotlin code
 ### Java:
 
 - File: `/geometry/shapes/Rectangle.java`
-  - 1 file = 1 class
+    - 1 file = 1 class
 - Package: `geometry.shapes`
 
 ### Kotlin:
+
 - File: `/geometry/shapes.kt`
-  - 1 file can contain multiple classes
+    - 1 file can contain multiple classes
 - Package: `geometry.shapes`
 
 # Enums
+
 - Declared using `enum class`
 - `enum` is a **soft keyword**. It can also be used as variable name etc.
 
 # When
+
 Replacement of the `switch` construct
 
 # Smart casts
+
+If you check the variable for a certain type (using `is`),
+you don’t need to cast it afterward.
+
+# Iterations
+
+### While loop
+
+- Do-while loop
+- While with labels
+
+### For loop
+
+- Iterate over **range**
+- Iterate over list
+- Iterate over list with index
+- Iterate over map
+
+
+
