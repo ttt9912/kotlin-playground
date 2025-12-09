@@ -7,6 +7,7 @@
 5. [CustomAccessors.kt](/src/CustomAccessors.kt)
 6. [Enum.kt](/src/Enum.kt)
 7. [When.kt](/src/When.kt)
+8. [SmartCasts.kt](/src/SmartCasts.kt)
 
 # Keywords
 
