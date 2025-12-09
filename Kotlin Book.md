@@ -10,6 +10,8 @@
 8. [SmartCasts.kt](/src/SmartCasts.kt)
 9. [Iterations.kt](/src/Iterations.kt)
 10. [CollectionMembership.kt](/src/CollectionMembership.kt)
+11. [Exceptions.kt](/src/Exceptions.kt)
+12. [TryCatchFinally.kt](/src/TryCatchFinally.kt)
 
 # Keywords
 
@@ -116,8 +118,28 @@ you don’t need to cast it afterward.
 - Iterate over map
 
 # Collection Membership
+
 Use `in` to check whether a value is in a
 range or collection
 
+# Exceptions
 
+## Throw
 
+- Similar to Java using `throw`, `try`, `catch`, `finally`
+- `throw` is an expression
+
+## Try-catch-finally
+
+- Can be used similar to Java
+- But is optional, as Kotlin doesn't have **checked exceptions**
+- `try` can be used as expression
+
+## No checked exceptions
+
+- Kotlin doesn't have `throws` in method signatures
+- Kotlin doesn't differentiate between checked and unchecked exceptions
+
+Experience has shown that the Java rules often require a lot of
+meaningless code to rethrow or ignore exceptions, and the rules
+don’t consistently protect you from the errors that can happen.
