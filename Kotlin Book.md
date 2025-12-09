@@ -9,6 +9,7 @@
 7. [When.kt](/src/When.kt)
 8. [SmartCasts.kt](/src/SmartCasts.kt)
 9. [Iterations.kt](/src/Iterations.kt)
+10. [CollectionMembership.kt](/src/CollectionMembership.kt)
 
 # Keywords
 
@@ -113,6 +114,10 @@ you don’t need to cast it afterward.
 - Iterate over list
 - Iterate over list with index
 - Iterate over map
+
+# Collection Membership
+Use `in` to check whether a value is in a
+range or collection
 
 
 

@@ -42,7 +42,7 @@ fun mix(c1: Color, c2: Color) =
  * worth avoid creating many short-lived objects, which need to
  * be cleaned up by the garbage collector.
  */
-fun mixOptimized(c1: Color, c2: Color)=
+fun mixOptimized(c1: Color, c2: Color) =
     when {
         (c1 == Color.RED && c2 == Color.YELLOW) ||
                 (c1 == Color.YELLOW && c2 == Color.RED) -> Color.ORANGE
@@ -50,8 +50,20 @@ fun mixOptimized(c1: Color, c2: Color)=
         else -> throw Exception("Dirty color")
     }
 
+/**
+ * Using range checks with `in`
+ */
+fun recognizeRange(c: Char) =
+    when (c) {
+        in '0'..'9' -> "$c is a digit!"
+        in 'a'..'z', in 'A'..'Z' -> "$c is a letter!"
+        else -> "I don't know what $c is..."
+    }
+
 fun main() {
     println(getWarmthFromSensor(Color.BLUE))
     println(getWarmthFromSensor2())
     println(mix(Color.BLUE, Color.YELLOW))
+    println("----")
+    println(recognizeRange('8'))
 }
