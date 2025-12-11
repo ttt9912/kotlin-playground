@@ -19,6 +19,7 @@
 * [DestructuringDeclaration.kt](/src/DestructuringDeclaration.kt)
 * [StringExtensionFunctions.kt](/src/StringExtensionFunctions.kt)
 * [Regex.kt](/src/Regex.kt)
+* [MultilineStrings.kt](/src/MultilineStrings.kt)
 
 # Keywords
 
@@ -345,4 +346,16 @@ for ((index, element) in collection.withIndex()) {/*...*/}
 - `"12.345-6.A".split("\\.|-".toRegex())` split with regex
 - `"12.345-6.A".split(".", "-")` split with multiple chars
 
+## Multiline strings
 
+- Triple-quoted
+- Avoids escaping characters
+
+### Synthax highlighting in Intellij
+
+- Eg. highlight Multiline JSON
+
+-> Place cursor inside string -> Alt+Enter
+-> Inject language or reference -> Json
+
+# Local functions

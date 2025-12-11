@@ -13,7 +13,6 @@ fun main() {
         val (directory, filename, extension) = matchResult.destructured
 
         println("Directory: $directory")
-        println("Full filename: $filename")
         println("Filename: $filename")
         println("Extension: $extension")
     }
