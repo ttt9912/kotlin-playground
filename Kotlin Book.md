@@ -1,21 +1,24 @@
 # Order of files
 
-1. [Person.kt](/src/Person.kt)
-2. [NullSafety.kt](/src/NullSafety.kt)
-3. [CastSafety.kt](/src/CastSafety.kt)
-4. [StringTemplates.kt](/src/StringTemplates.kt)
-5. [CustomAccessors.kt](/src/CustomAccessors.kt)
-6. [Enum.kt](/src/Enum.kt)
-7. [When.kt](/src/When.kt)
-8. [SmartCasts.kt](/src/SmartCasts.kt)
-9. [Iterations.kt](/src/Iterations.kt)
-10. [CollectionMembership.kt](/src/CollectionMembership.kt)
-11. [Exceptions.kt](/src/Exceptions.kt)
-12. [TryCatchFinally.kt](/src/TryCatchFinally.kt)
-13. [Collections.kt](/src/Collections.kt)
-14. [Functions.kt](/src/Functions.kt)
-15. [ExtensionFunctions.kt](/src/ExtensionFunctions.kt)
-16. [ExtensionProperties.kt](/src/ExtensionProperties.kt)
+* [Person.kt](/src/Person.kt)
+* [NullSafety.kt](/src/NullSafety.kt)
+* [CastSafety.kt](/src/CastSafety.kt)
+* [StringTemplates.kt](/src/StringTemplates.kt)
+* [CustomAccessors.kt](/src/CustomAccessors.kt)
+* [Enum.kt](/src/Enum.kt)
+* [When.kt](/src/When.kt)
+* [SmartCasts.kt](/src/SmartCasts.kt)
+* [Iterations.kt](/src/Iterations.kt)
+* [CollectionMembership.kt](/src/CollectionMembership.kt)
+* [Exceptions.kt](/src/Exceptions.kt)
+* [TryCatchFinally.kt](/src/TryCatchFinally.kt)
+* [Functions.kt](/src/Functions.kt)
+* [ExtensionFunctions.kt](/src/ExtensionFunctions.kt)
+* [ExtensionProperties.kt](/src/ExtensionProperties.kt)
+* [Collections.kt](/src/Collections.kt)
+* [DestructuringDeclaration.kt](/src/DestructuringDeclaration.kt)
+* [StringExtensionFunctions.kt](/src/StringExtensionFunctions.kt)
+* [Regex.kt](/src/Regex.kt)
 
 # Keywords
 
@@ -148,23 +151,6 @@ Experience has shown that the Java rules often require a lot of
 meaningless code to rethrow or ignore exceptions, and the rules
 don’t consistently protect you from the errors that can happen.
 
-# Collections
-
-## Collection Classes
-
-Kotlin uses the standard Java collection classes.
-
-- `setOf()` -> java.util.LinkedHashSet
-- `listOf()` -> java.util.Arrays$ArrayList
-- `mapOf()` -> java.util.LinkedHashMap
-
-### Notes
-
-- Kotlin’s collection interfaces are **immutable** by default.
-- Kotlin collections are fully Java compatible
-    - No need to convert collections between Java and Kotlin
-    - But Kotlin has much more operations (get last, shuffle...)
-
 # Functions
 
 ## Named arguments
@@ -269,4 +255,94 @@ It’s not possible to add extra fields to existing instances
 of Java objects.
 
 Extension properties can be immutable or mutable
+
+# Collections
+
+## Collection Classes
+
+Kotlin uses the standard Java collection classes.
+
+- `setOf()` -> java.util.LinkedHashSet
+- `listOf()` -> java.util.Arrays$ArrayList
+- `mapOf()` -> java.util.LinkedHashMap
+
+### Notes
+
+- Kotlin’s collection interfaces are **immutable** by default.
+- Kotlin collections are fully Java compatible
+    - No need to convert collections between Java and Kotlin
+    - But Kotlin has much more operations (get last, shuffle...)
+
+# The `vararg` keyword
+
+Varargs: functions that accept an arbitrary number of arguments.
+Essentially the same thing as `args...` in Java
+
+## Spread operator
+
+Expands an array:
+
+```
+fun printAll(vararg items: String) {
+    items.forEach { println(it) }
+}
+
+val arr = arrayOf("A", "B", "C")
+
+printAll(*arr) // "A", "B", "C"
+```
+
+```
+val more = arrayOf("X", "Y")
+val combined = arrayOf("A", "B", *more, "Z")
+```
+
+# Infix notation
+
+```
+val map = 
+    mapOf(1 to "one", 7 to "seven", 53 to "fifty-three") 
+```
+
+The word `to` in this line of code isn’t a built-in construct but,
+rather, a method invocation of a special kind, an infix call.
+
+Infix call: method name is placed between target and parameter.
+
+Those two calls are equivalent:
+
+```
+1.to("one")
+1 to "one"
+```
+
+# Destructuring declaration
+
+## Pair
+
+You can initialize two variables with the contents of a Pair directly:
+
+```
+val (number, name) = 1 to "one"
+```
+
+This feature is called a destructuring declaration.
+
+## Key-value
+
+```
+for ((index, element) in collection.withIndex()) {/*...*/}
+```
+
+# Kotlin Strings
+
+- Exactly the same as Java strings. No conversion needed
+- Kotlin provides useful extension functions (like with collections)
+
+## String extension functions
+
+- `toRegex()` converts a string to a regex
+- `"12.345-6.A".split("\\.|-".toRegex())` split with regex
+- `"12.345-6.A".split(".", "-")` split with multiple chars
+
 
