@@ -359,3 +359,20 @@ for ((index, element) in collection.withIndex()) {/*...*/}
 -> Inject language or reference -> Json
 
 # Local functions
+
+- Nest functions
+- Inner function has access to all parameters and variables
+  of the encolsing function
+- Extension functions can also be declared as local functions,
+
+# Classes overview
+
+- Kotlin’s declarations are `public final`, by default.
+- Nested classes aren’t inner by default - they don’t contain an
+  implicit reference to their outer class
+- `data class` instructs the compiler to generate several standard
+  methods for this class
+- Delegation pattern is supported natively in Kotlin
+- Class can implement many interfaces and extend max one class
+
+# Interfaces 
