@@ -20,6 +20,10 @@
 * [StringExtensionFunctions.kt](/src/StringExtensionFunctions.kt)
 * [Regex.kt](/src/Regex.kt)
 * [MultilineStrings.kt](/src/MultilineStrings.kt)
+* [Interfaces.kt](/src/Interfaces.kt)
+* [InterfacesDefaultImpl.kt](/src/InterfacesDefaultImpl.kt)
+* [OpenClasses.kt](/src/OpenClasses.kt)
+* [AbstractClasses.kt](/src/AbstractClasses.kt)
 
 # Keywords
 
@@ -375,4 +379,42 @@ for ((index, element) in collection.withIndex()) {/*...*/}
 - Delegation pattern is supported natively in Kotlin
 - Class can implement many interfaces and extend max one class
 
-# Interfaces 
+# Interfaces
+
+Can define abstract methods and default implementations.
+Cannot have state.
+
+# Class modifiers
+
+- open
+- final
+- abstract
+
+# Final by default
+
+But in Kotlin, classes and methods are final by default, unlike Java.
+
+## Open class
+
+To extend a class, the class needs to be declared `open`
+
+Why? **Fragile base class problem**: any change in the base class may
+lead to unexpected changes of behaviour in the subclasses.
+
+`abstract` classes and interfaces are always open
+
+## Open methods
+
+- To override a method, the method needs to be declared `open`
+- Methods marked with `override` that override a method from a base
+  class or interface are also open by default. To avoid overriding in
+  subclasses, mark the method with `final`
+
+## Spring
+
+Spring beans need to be declared `open`
+
+# Abstract classes
+
+Defining abstract **properties** and **methods**
+Abstract class can't be instantiated
