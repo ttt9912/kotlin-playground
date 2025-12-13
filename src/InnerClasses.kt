@@ -5,15 +5,18 @@
  *   outer class
  * - Declared using `ìnner`
  *
+ * Referencing the outer class is via
+ * `this@Outer`
+ *
  * Nested class is accessible by default via
  * outer.Inner()
  */
 class Outer {
-    val outerValue = 10
+    val value = 10
 
     inner class Inner {
         fun printValue() {
-            println(outerValue)
+            println(this@Outer.value)
         }
     }
 }

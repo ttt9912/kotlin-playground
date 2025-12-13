@@ -475,7 +475,7 @@ An **inner** class keeps a reference to an instance of the outer
 class.
 
 - HAS a reference to the outer class instance
-- Can access outer class members
+- Can access outer class members (using `this@Outer`)
 - Requires an outer class instance to be created
 
 Declared using the `inner` keyword
