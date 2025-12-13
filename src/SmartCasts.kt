@@ -1,5 +1,4 @@
 /**
- *
  * If you check the variable for a certain type (using `is`),
  * you don’t need to cast it afterward.
  *
@@ -7,7 +6,6 @@
  * 1. If an expression is a Num, you return the corresponding value.
  * 2. If it’s a Sum, you must evaluate the left and right expressions
  * recursively and return their sum.
- *
  */
 interface Expr
 class Num(val value: Int) : Expr

@@ -26,6 +26,7 @@
 * [AbstractClasses.kt](/src/AbstractClasses.kt)
 * [NestedClasses.kt](/src/NestedClasses.kt)
 * [InnerClasses.kt](/src/InnerClasses.kt)
+* [SealedClasses.kt](/src/SealedClasses.kt)
 
 # Keywords
 
@@ -487,8 +488,22 @@ an inner class by default.
 
 Use **static** to make it a nested class
 
+# Sealed classes
 
+- Restricts which classes can inherit from it
+- All subclasses must be known at compile time
+- All subclasses must be in tha same package and module as
+  the sealed class
+- Is abstract by default (not instantiable)
 
+### Benefit
 
+No default branch required in `when` clause - compiler
+knows all cases.
 
+(vgl. [SmartCasts.kt](/src/SmartCasts.kt) Line 44)
+
+# Sealed interfaces
+
+Same rules as sealed classes
 
