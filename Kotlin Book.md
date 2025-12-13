@@ -24,6 +24,8 @@
 * [InterfacesDefaultImpl.kt](/src/InterfacesDefaultImpl.kt)
 * [OpenClasses.kt](/src/OpenClasses.kt)
 * [AbstractClasses.kt](/src/AbstractClasses.kt)
+* [NestedClasses.kt](/src/NestedClasses.kt)
+* [InnerClasses.kt](/src/InnerClasses.kt)
 
 # Keywords
 
@@ -386,9 +388,13 @@ Cannot have state.
 
 # Class modifiers
 
-- open
-- final
-- abstract
+```
+open
+final
+abstract
+```
+
+Default: `final`
 
 # Final by default
 
@@ -418,3 +424,71 @@ Spring beans need to be declared `open`
 
 Defining abstract **properties** and **methods**
 Abstract class can't be instantiated
+
+# Visibility modifiers
+
+```
+public
+internal
+protected
+private
+```
+
+Default: `public`
+
+-`internal`: visible in module
+
+- `protected`: visible in subclasses
+- `private`: visible inside a class or, in the case of top-level
+  declarations, visible inside a file
+
+### Extension functions
+
+Extension functions have no access to `private` and `protected`
+members
+
+# `internal` visibility
+
+- Internal: visible within your module (= set of Kotlin files
+  compiled together)
+- No package-private visibility
+
+The advantage of internal visibility is that it provides real
+encapsulation for the implementation details of your module.
+In Java, the encapsulation can be easily broken because external
+code can define classes in the same packages used by your code and,
+thus, gain access to your package-private declarations.
+
+# Nested class
+
+Like a **static** nested class in Java
+
+- Does NOT hold a reference to the outer class
+- Cannot access outer class members directly
+- More memory-efficient
+
+**Default behavior in Kotlin**
+
+# Inner class
+
+An **inner** class keeps a reference to an instance of the outer
+class.
+
+- HAS a reference to the outer class instance
+- Can access outer class members
+- Requires an outer class instance to be created
+
+Declared using the `inner` keyword
+
+## Java
+
+In Java, when you declare a class in another class, it becomes
+an inner class by default.
+
+Use **static** to make it a nested class
+
+
+
+
+
+
