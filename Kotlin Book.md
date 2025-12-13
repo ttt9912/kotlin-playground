@@ -27,6 +27,8 @@
 * [NestedClasses.kt](/src/NestedClasses.kt)
 * [InnerClasses.kt](/src/InnerClasses.kt)
 * [SealedClasses.kt](/src/SealedClasses.kt)
+* [PrimaryConstructor.kt](/src/PrimaryConstructor.kt)
+* [SecondaryConstructor.kt](/src/SecondaryConstructor.kt)
 
 # Keywords
 
@@ -507,3 +509,33 @@ knows all cases.
 
 Same rules as sealed classes
 
+# Primary constructor
+
+- Parentheses after class name
+- Most concise: `class User(name: String)`
+- Full: using `constructor` keyword and initialize variables in
+  `init` block
+
+# Secondary constructors
+
+- Defined inside class using `constructor`
+- Enables to initialize class in different ways
+- Do not use secondary constructors to overload a primary
+  constructor. Use default parameters on the primary for that.
+
+# Private primary constructor
+
+Class can't be initialized from outside
+
+In Java, you can use a private constructor that prohibits class
+instantiation to express a more general idea: the class is a container
+of **static utility** members or is a **singleton**.
+
+Kotlin has built-in language features for these purposes. You use
+top-level functions (which you saw in section 3.2.3) as static utilities.
+To express singletons, you use object declarations.
+
+# Initializer block
+
+- `init{}`
+- For initialization logic
